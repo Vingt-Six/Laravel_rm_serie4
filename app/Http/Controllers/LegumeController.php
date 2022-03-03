@@ -11,4 +11,9 @@ class LegumeController extends Controller
         $legumes = Legume::all();
         return view('pages.legumes', compact('legumes'));
     }
+
+    function show($id){
+        $show = Legume::find($id);
+        return view('pages.shows.showlegume', compact('show'));
+    }
 }
