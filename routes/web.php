@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\FruitController;
 use App\Http\Controllers\LegumeController;
 use App\Models\Fruit;
@@ -26,7 +27,7 @@ Route::get('/', function () {
 Route::get('/fruits', [FruitController::class, 'index'])->name('fruit');
 Route::get('/showfruits/{id}', [FruitController::class, 'show']);
 
-
-
 Route::get('/legumes', [LegumeController::class, 'index'])->name('legume');
 Route::get('/showlegumes/{id}', [LegumeController::class, 'show']);
+
+Route::get('/administration', [AdminController::class, 'index']);
