@@ -37,7 +37,9 @@ Route::get('/administration', [AdminController::class, 'index']);
 Route::get('/administration/fruits', [BackFruitController::class, 'index'])->name('backfruits');
 Route::get('/administration/fruits/create', [BackFruitController::class, 'create'])->name('addfruits');
 Route::post('/fruits/store', [BackFruitController::class, 'store']);
+Route::get('/showbackfruit/{id}', [BackFruitController::class, 'show']);
 
 Route::get('/administration/legumes', [BackLegumeController::class, 'index'])->name('backlegumes');
 Route::get('administration/legumes/create', [BackLegumeController::class, 'create'])->name('addlegumes');
 Route::post('/legumes/store', [BackLegumeController::class, 'store']);
+Route::get('/showbacklegume/{id}', [BackLegumeController::class, 'show']);

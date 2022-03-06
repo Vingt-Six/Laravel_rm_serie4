@@ -12,6 +12,11 @@ class BackLegumeController extends Controller
         return view('pages.back.backlegume', compact('legumes'));
     }
 
+    function show($id) {
+        $show = Legume::find($id);
+        return view('pages.shows.showbacklegume', compact('show'));
+    }
+
     function create() {
         return view('pages.back.addlegume');
     }

@@ -12,7 +12,7 @@
             @foreach ($legumes as $legume)
                 <tr>
                     <th scope="row">{{$legume -> id}}</th>
-                    <td>{{$legume -> name}}</td>
+                    <td><a href="/showbacklegume/{{$legume -> id}}" class="text-decoration-none text-dark">{{$legume -> name}}</a></td>
                     <td>{{$legume -> quantity}}</td>
                 </tr>
             @endforeach

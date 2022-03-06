@@ -12,6 +12,11 @@ class BackFruitController extends Controller
         return view('pages.back.backfruit', compact('fruits'));
     }
 
+    function show($id) {
+        $show = Fruit::find($id);
+        return view('pages.shows.showbackfruit', compact('show'));
+    }
+
     function create() {
         return view('pages.back.addfruit');
     }

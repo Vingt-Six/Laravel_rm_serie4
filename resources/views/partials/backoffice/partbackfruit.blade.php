@@ -12,7 +12,7 @@
             @foreach ($fruits as $fruit)
                 <tr>
                     <th scope="row">{{$fruit -> id}}</th>
-                    <td>{{$fruit -> name}}</td>
+                    <td><a href="/showbackfruit/{{$fruit -> id}}" class="text-decoration-none text-dark">{{$fruit -> name}}</a></td>
                     <td>{{$fruit -> quantity}}</td>
                 </tr>
             @endforeach
