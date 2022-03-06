@@ -1,4 +1,4 @@
 <section>
-    <button class="btn btn-dark"><a href="{{URL::previous()}}" class="text-decoration-none text-light">Go Back</a></button>
+    <a href="{{URL::previous()}}" class="btn btn-warning">Back</a>
     <h1>{{$show->name}} - {{$show->quantity}}</h1>
 </section>

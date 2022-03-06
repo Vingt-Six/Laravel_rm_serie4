@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BackFruitController;
+use App\Http\Controllers\BackLegumeController;
 use App\Http\Controllers\FruitController;
 use App\Http\Controllers\LegumeController;
 use App\Models\Fruit;
@@ -31,3 +33,11 @@ Route::get('/legumes', [LegumeController::class, 'index'])->name('legume');
 Route::get('/showlegumes/{id}', [LegumeController::class, 'show']);
 
 Route::get('/administration', [AdminController::class, 'index']);
+
+Route::get('/administration/fruits', [BackFruitController::class, 'index'])->name('backfruits');
+Route::get('/administration/fruits/create', [BackFruitController::class, 'create'])->name('addfruits');
+Route::post('/fruits/store', [BackFruitController::class, 'store']);
+
+Route::get('/administration/legumes', [BackLegumeController::class, 'index'])->name('backlegumes');
+Route::get('administration/legumes/create', [BackLegumeController::class, 'create'])->name('addlegumes');
+Route::post('/legumes/store', [BackLegumeController::class, 'store']);
