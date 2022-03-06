@@ -28,4 +28,10 @@ class BackLegumeController extends Controller
         $store -> save();
         return redirect('/administration/legumes');
     }
+
+    function destroy($id) {
+        $delete = Legume::find($id);
+        $delete -> delete();
+        return redirect('/administration/legumes');
+    }
 }

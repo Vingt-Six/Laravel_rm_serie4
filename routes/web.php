@@ -38,8 +38,10 @@ Route::get('/administration/fruits', [BackFruitController::class, 'index'])->nam
 Route::get('/administration/fruits/create', [BackFruitController::class, 'create'])->name('addfruits');
 Route::post('/fruits/store', [BackFruitController::class, 'store']);
 Route::get('/showbackfruit/{id}', [BackFruitController::class, 'show']);
+Route::delete('/deletefruit/{id}', [BackFruitController::class, 'destroy']);
 
 Route::get('/administration/legumes', [BackLegumeController::class, 'index'])->name('backlegumes');
 Route::get('administration/legumes/create', [BackLegumeController::class, 'create'])->name('addlegumes');
 Route::post('/legumes/store', [BackLegumeController::class, 'store']);
 Route::get('/showbacklegume/{id}', [BackLegumeController::class, 'show']);
+Route::delete('/deletelegume/{id}', [BackLegumeController::class, 'destroy']);

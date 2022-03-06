@@ -28,4 +28,10 @@ class BackFruitController extends Controller
         $store -> save();
         return redirect('/administration/fruits');
     }
+
+    function destroy($id) {
+        $delete = Fruit::find($id);
+        $delete -> delete();
+        return redirect('/administration/fruits');
+    }
 }
